@@ -42,7 +42,6 @@ B. Properties of a string (length, integers) On the odd indexes we know we're on
 
 }
 
-
 Step 3 - If the doubled value is greater than or equal to 10, take the value and subtract 9 from it.
 
 
