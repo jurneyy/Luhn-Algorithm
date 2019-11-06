@@ -17,9 +17,6 @@ Luhn.is_valid?(4194560385008504)
 
 
 
-
-
-
 =begin
 
 Step 1 - break the credit card into its individual digits.
