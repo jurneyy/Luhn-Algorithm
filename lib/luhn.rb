@@ -3,9 +3,9 @@ module Luhn
     card_number = number.to_s.reverse
     card_number.each_char.with_index do |ch, i|
     	if i % 2 != 0
-    		puts ch, i
-    		puts
+    		double = ch.to_i * 2 
     	end
+    	puts double
     end 
   end
 end
