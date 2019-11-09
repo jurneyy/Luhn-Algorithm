@@ -16,7 +16,11 @@ module Luhn
     		sum << even 
     	end 
     end 
-    puts sum 
+		sum.each_with_index do |val, i|
+			value = val + val 
+			puts value
+		end 
+    
   end
 end
 
