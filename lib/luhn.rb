@@ -1,32 +1,29 @@
 module Luhn
   def self.is_valid?(number)
-  	sum = []
+  	sum = 0
     card_number = number.to_s.reverse
     card_number.each_char.with_index do |ch, i|
     	if i % 2 != 0
     		double = ch.to_i * 2 
     		if double >= 10 
     			double -= 9 
-    			sum << double 
+    			sum += double 
     		else 
-    			sum << double 
+    			sum += double 
     		end 
     	else 
     		even = ch.to_i
-    		sum << even 
+    		sum += even 
     	end 
     end 
-    value = 0 
-		sum.each do |num|
-			value += num
-		end 
-		puts value
+
+    puts sum
+    return sum % 10 == 0 
   end
 end
 
 
-
-Luhn.is_valid?(4194560385008504)
+puts Luhn.is_valid?(4194560385008504)
 
 
 
